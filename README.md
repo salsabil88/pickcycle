@@ -1,1 +1,2 @@
-# pickcycle
+# PickCycle
+PickCycle is a civic web platform designed to help residents of Dhaka take meaningful action against plastic waste pollution. Instead of discarding plastic irresponsibly, users can fill out a simple recycling request form and have a designated pickup person collect the waste directly from their location. The platform also features community eco-events, encouraging citizens to come together and actively contribute to a cleaner, greener city. The UI was thoughtfully designed with UX principles in mind, keeping the experience intuitive and accessible for everyday users. Built with HTML and CSS on the frontend and PHP powering the backend, PickCycle is a small but purposeful step toward making sustainable habits easier for everyone in Dhaka.
