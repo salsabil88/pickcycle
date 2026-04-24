@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f4f7fc;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .login-container, .dashboard-container {
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        .login-container h2, .dashboard-container h2 {
+            text-align: center;
+        }
+        .dashboard-container {
+            display: none; /* Initially hidden */
+        }
+        .dispute-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .dispute-card h5 {
+            font-size: 1.25rem;
+        }
+        .btn {
+            width: 48%;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Login Form -->
+        <div class="login-container" id="loginContainer">
+            <h2>Admin Login</h2>
+            <form id="loginForm">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+        </div>
+
+        <!-- Admin Dashboard (Initially hidden) -->
+        <div class="dashboard-container" id="dashboardContainer">
+            <h2>Admin Dashboard</h2>
+            <div class="dispute-card">
+                <h5>Dispute #1</h5>
+                <p><strong>Description:</strong> Issue with online transaction.</p>
+                <p><strong>Defender:</strong> John Doe</p>
+                <p><strong>Date:</strong> 2025-04-29</p>
+                <p><strong>AI Summary:</strong> AI generated summary of the dispute. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button class="btn btn-success" id="approveBtn">Approve</button>
+                <button class="btn btn-danger" id="declineBtn">Decline</button>
+            </div>
+
+            <!-- More dispute cards can be added here dynamically -->
+        </div>
+    </div>
+
+    <script>
+        // Simulate successful login for now, replace with actual logic later
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simple check for demonstration, replace with real auth later
+            if (username === 'admin' && password === 'admin') {
+                // Hide login form and show the dashboard
+                document.getElementById('loginContainer').style.display = 'none';
+                document.getElementById('dashboardContainer').style.display = 'block';
+            } else {
+                alert('Invalid credentials, please try again.');
+            }
+        });
+
+        // Handle approve and decline actions
+        document.getElementById('approveBtn').addEventListener('click', function() {
+            alert('Dispute Approved');
+        });
+
+        document.getElementById('declineBtn').addEventListener('click', function() {
+            alert('Dispute Declined');
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
